@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="8dp"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:scaleType="fitXY"
+            android:id="@+id/image"
+            />
+
+
+        <TextView
+            android:id="@+id/expirationDate"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="04/06/2024 "
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/removalDate"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+
+            android:layout_height="wrap_content"
+            android:text="-----"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status: Product has been removed"
+        android:textColor="#FF1313"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center"
+        />
+    <View
+        android:layout_width="wrap_content"
+        android:background="#dfdfdf"
+        android:layout_marginTop="8dp"
+
+        android:layout_height="2dp"/>
+</LinearLayout>

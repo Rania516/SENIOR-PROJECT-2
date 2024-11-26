@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_courier.xml"
+    app:startDestination="@id/courierHomeFragment">
+
+    <fragment
+        android:id="@+id/courierHomeFragment"
+        android:name="com.example.logisticcavan.orders.getOrders.courier.presentaion.CourierHomeFragment"
+        android:label="fragment_courier_home"
+        tools:layout="@layout/fragment_courier_home" >
+        <action
+            android:id="@+id/action_courierHomeFragment_to_orderDetailFragment"
+            app:destination="@id/orderDetailFragment" />
+        <action
+            android:id="@+id/action_courierHomeFragment_to_expiredProductsFragment"
+            app:destination="@id/expiredProductsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/moreFragment"
+        android:name="com.example.logisticcavan.more.presentaion.MoreFragment"
+        android:label="fragment_more"
+        tools:layout="@layout/fragment_more" >
+        <action
+            android:id="@+id/action_moreFragment_to_aboutAppFragment"
+            app:destination="@id/aboutAppFragment" />
+        <action
+            android:id="@+id/action_moreFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.example.logisticcavan.notifications.presentaion.ui.NotificationFragment"
+        android:label="fragment_courier_notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        tools:layout="@layout/fragment_change_password"
+        android:name="com.example.logisticcavan.more.presentaion.ChangePasswordFragment"
+        android:label="ChangePasswordFragment" />
+    <fragment
+        android:id="@+id/aboutAppFragment"
+        android:name="com.example.logisticcavan.more.presentaion.AboutAppFragment"
+        android:label="fragment_about_app"
+        tools:layout="@layout/fragment_about_app" />
+    <fragment
+        android:id="@+id/profileFragment"
+        tools:layout="@layout/fragment_profile"
+        android:name="com.example.logisticcavan.more.presentaion.ProfileFragment"
+        android:label="ProfileFragment" >
+        <action
+            android:id="@+id/action_profileFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderDetailFragment"
+        tools:layout="@layout/fragment_order_detail"
+        android:name="com.example.logisticcavan.orders.updateStatusOrder.presentaion.OrderDetailFragment"
+        android:label="OrderDetailFragment" >
+        <argument
+            android:name="order"
+            app:argType="com.example.logisticcavan.orders.getOrders.domain.Order" />
+        <action
+            android:id="@+id/action_orderDetailFragment_to_chattingFragment"
+            app:destination="@id/chattingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chattingFragment"
+        tools:layout="@layout/fragment_chatting"
+        android:name="com.example.logisticcavan.chatting.presentaion.ChattingFragment"
+        android:label="ChattingFragment" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="orderId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/expiredProductsFragment"
+        android:name="com.example.logisticcavan.getExpiredProducts.presentaion.ExpiredProductsFragment"
+        android:label="ExpiredProductsFragment" />
+</navigation>
